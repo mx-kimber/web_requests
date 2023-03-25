@@ -1,7 +1,7 @@
 require 'http'
 
 
-puts "Please enter a word"
+puts "Please enter a word."
 user_input = gets.chomp
 response = HTTP.get("https://api.wordnik.com/v4/word.json/#{user_input}/definitions?limit=200&includeRelated=false&useCanonical=false&includeTags=false&api_key=")
 definitions = response.parse(:json)
